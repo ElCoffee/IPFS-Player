@@ -7,6 +7,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.NotificationCompat
+import android.util.Log
 
 class IPFSDaemonService : IntentService("IPFSDaemonService") {
 
@@ -15,6 +16,7 @@ class IPFSDaemonService : IntentService("IPFSDaemonService") {
     internal var NOTIFICATION_ID = 12345
 
     override fun onHandleIntent(intent: Intent) {
+        Log.d("zboub", "IPFSDaemonService started");
         val exitIntent = Intent(this, IPFSDaemonService::class.java)
         exitIntent.action = "STOP"
         val pendingExit = PendingIntent.getService(this, 0, exitIntent, 0)

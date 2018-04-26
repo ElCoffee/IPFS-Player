@@ -1,6 +1,7 @@
 package com.example.wassim.musicoinplayer;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -20,11 +21,14 @@ import java.io.IOException;
 
 import io.ipfs.kotlin.IPFS;
 import io.ipfs.kotlin.IPFSConnection;
+import io.ipfs.kotlin.commands.Info;
+import io.ipfs.kotlin.model.VersionInfo;
 import okhttp3.ResponseBody;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView currImv;
     private static final String HASH = "QmTfCkcHCNuTkLU5e54ofRnF17dzxxQmmuwgb86bsArqwv";
+    private IPFSDaemon ipfsDaemon = new IPFSDaemon(this);
 
     Context context;
 
@@ -39,14 +43,11 @@ public class MainActivity extends AppCompatActivity {
         discoverImageView.getDrawable().setColorFilter(0xffffcc00, PorterDuff.Mode.SRC_ATOP);
         currImv = discoverImageView;
 
+        ipfsDaemon.download(this,true);
 
-        context = getApplicationContext();
-        IPFSDaemon ipfsDaemon = new IPFSDaemon(getApplicationContext());
+        startService(new Intent(MainActivity.this, IPFSDaemonService.class));
 
-        ipfsDaemon.calldownload(this,ipfsDaemon);
 
-        Intent intent = new Intent(this, IPFSDaemonService.class);
-        startService(intent);
 
 
         IPFSGetTask getAsync = new IPFSGetTask();
@@ -67,9 +68,22 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected byte[] doInBackground(String... strings) {
-            IPFSConnection ipfs = new IPFS().getGet().getIpfs();
-            Log.i("IPFS", "IPFS Base URL = " + ipfs.getBase_url());
-            ResponseBody rb = ipfs.callCmd("cat/" + strings[0]);
+            IPFSConnection ipfs1 = new IPFS().getGet().getIpfs();
+
+/*
+            context = getApplicationContext();
+            IPFSDaemon ipfsDaemon = new IPFSDaemon(getApplicationContext());
+
+            ipfsDaemon.download(MainActivity.this,true);
+
+            startService(new Intent(MainActivity.this, IPFSDaemonService.class));
+
+            VersionInfo version = null;
+            version = new Info(ipfs1).version();
+*/
+
+            Log.i("IPFS", "IPFS Base URL = " + ipfs1.getBase_url());
+            ResponseBody rb = ipfs1.callCmd("cat/" + strings[0]);
             try {
                 fileContents = rb.bytes();
             } catch (IOException e) {

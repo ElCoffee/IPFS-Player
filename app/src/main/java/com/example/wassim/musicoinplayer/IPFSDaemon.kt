@@ -17,12 +17,11 @@ import java.io.File
 import java.io.FileNotFoundException
 import android.support.v7.app.AppCompatActivity
 import android.content.res.AssetManager
-
-
-
+import android.util.Log
 
 
 class IPFSDaemon(private val androidContext: Context) {
+
     private fun getBinaryFile() = File(androidContext.filesDir, "ipfsbin")
     private fun getRepoPath() = File(androidContext.filesDir, ".ipfs_repo")
     fun getVersionFile() = File(androidContext.filesDir, ".ipfs_version")
@@ -30,24 +29,26 @@ class IPFSDaemon(private val androidContext: Context) {
     fun isReady() = File(getRepoPath(), "version").exists()
 
     private fun getBinaryFileByABI(abi: String) = when {
+
         abi.toLowerCase().startsWith("x86") -> "x86"
         abi.toLowerCase().startsWith("arm") -> "arm"
         else -> "unknown"
     }
 
     fun download(activity: Activity,
-                 runInit: Boolean,
-                 afterDownloadCallback: () -> Unit) = async(UI) {
+                 runInit: Boolean) = async(UI) {
 
         val progressDialog = ProgressDialog(androidContext)
         progressDialog.setMessage("Copy IPFS binary")
         progressDialog.setCancelable(false)
         progressDialog.show()
+        Log.d("zboub", "Position 1");
 
         try {
             async(CommonPool) {
                 downloadFile(activity)
                 getBinaryFile().setExecutable(true)
+                Log.d("zboub", "Position 2");
             }.await()
 
             if (runInit) {
@@ -67,7 +68,7 @@ class IPFSDaemon(private val androidContext: Context) {
             }
             progressDialog.dismiss()
 
-            afterDownloadCallback()
+            //afterDownloadCallback()
 
         } catch (e: FileNotFoundException) {
             progressDialog.dismiss()
@@ -97,7 +98,7 @@ class IPFSDaemon(private val androidContext: Context) {
         sink.close()
 
     }
-
+ /*
     fun calldownload(activity: Activity,ipfsDaemon: IPFSDaemon){
         val mngr = activity.getAssets()
         ipfsDaemon.download(activity, runInit = true) {
@@ -105,6 +106,6 @@ class IPFSDaemon(private val androidContext: Context) {
         }
 
 
-    }
+    }*/
 
 }
