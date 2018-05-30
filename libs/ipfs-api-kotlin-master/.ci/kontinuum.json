@@ -1,4 +1,0 @@
-{
-"type":"kotlincli",
-"stages":["test","build"]
-}
