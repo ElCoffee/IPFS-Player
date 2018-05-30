@@ -1,4 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer;
+package com.example.wassim.musicoinplayer;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class SongsInPlaylist extends Activity{
+public class SongsInPlaylist extends Activity {
 
     private TextView name1;
     private TextView name2;

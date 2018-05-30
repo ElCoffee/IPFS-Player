@@ -1,23 +1,14 @@
 package com.example.wassim.musicoinplayer
 
 
-import android.R
 import android.app.Activity
-import android.app.ProgressDialog
 import android.content.Context
 import android.os.Build
-import android.provider.Contacts
-import android.provider.Contacts.Intents.UI
 import android.support.v7.app.AlertDialog
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.async
+import android.util.Log
 import okio.Okio
 import java.io.File
 import java.io.FileNotFoundException
-import android.support.v7.app.AppCompatActivity
-import android.content.res.AssetManager
-import android.util.Log
 
 
 class IPFSDaemon(private val androidContext: Context) {
@@ -35,50 +26,6 @@ class IPFSDaemon(private val androidContext: Context) {
         else -> "unknown"
     }
 
-    fun download(activity: Activity,
-                 runInit: Boolean) = async(UI) {
-
-        val progressDialog = ProgressDialog(androidContext)
-        progressDialog.setMessage("Copy IPFS binary")
-        progressDialog.setCancelable(false)
-        progressDialog.show()
-        Log.d("zboub", "Position 1");
-
-        try {
-            async(CommonPool) {
-                downloadFile(activity)
-                getBinaryFile().setExecutable(true)
-                Log.d("zboub", "Position 2");
-            }.await()
-
-            if (runInit) {
-                progressDialog.setMessage("Running init")
-
-                val readText = async(CommonPool) {
-                    val exec = run("init")
-                    exec.waitFor()
-
-                    exec.inputStream.bufferedReader().readText() + exec.errorStream.bufferedReader().readText()
-                }.await()
-
-                AlertDialog.Builder(androidContext)
-                        .setMessage(readText)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .show()
-            }
-            progressDialog.dismiss()
-
-            //afterDownloadCallback()
-
-        } catch (e: FileNotFoundException) {
-            progressDialog.dismiss()
-            AlertDialog.Builder(androidContext)
-                    .setMessage("Unsupported architecture " + Build.CPU_ABI)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .show()
-
-        }
-    }
 
     fun run(cmd: String): Process {
         val env = arrayOf("IPFS_PATH=" + getRepoPath().absoluteFile)
@@ -98,14 +45,46 @@ class IPFSDaemon(private val androidContext: Context) {
         sink.close()
 
     }
- /*
-    fun calldownload(activity: Activity,ipfsDaemon: IPFSDaemon){
-        val mngr = activity.getAssets()
-        ipfsDaemon.download(activity, runInit = true) {
-            ipfsDaemon.getVersionFile().writeText(mngr.open("version").reader().readText())
+
+    fun download(activity: Activity,
+                 runInit: Boolean) {
+
+        Log.d("zboub", "Position 1");
+
+        try {
+
+            downloadFile(activity)
+            getBinaryFile().setExecutable(true)
+            Log.d("zboub", "Position 2");
+
+
+            if (runInit) {
+                    val exec = run("init")
+                    exec.waitFor()
+                    exec.inputStream.bufferedReader().readText() + exec.errorStream.bufferedReader().readText()
+            }
+
+            //afterDownloadCallback()
+
+        } catch (e: FileNotFoundException) {
+            AlertDialog.Builder(androidContext)
+                    .setMessage("Unsupported architecture " + Build.CPU_ABI)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show()
+
         }
+    }
 
 
-    }*/
+
+    /*
+       fun calldownload(activity: Activity,ipfsDaemon: IPFSDaemon){
+           val mngr = activity.getAssets()
+           ipfsDaemon.download(activity, runInit = true) {
+               ipfsDaemon.getVersionFile().writeText(mngr.open("version").reader().readText())
+           }
+
+
+       }*/
 
 }

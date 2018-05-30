@@ -1,4 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer;
+package com.example.wassim.musicoinplayer;
 
 import android.os.Environment;
 import android.util.Log;

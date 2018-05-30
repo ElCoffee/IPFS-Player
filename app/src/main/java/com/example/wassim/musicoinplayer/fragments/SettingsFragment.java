@@ -1,16 +1,9 @@
-package com.centralesupelec.ipfs.ipfsplayer.fragments;
+package com.example.wassim.musicoinplayer.fragments;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.preference.PreferenceFragmentCompat;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.centralesupelec.ipfs.ipfsplayer.R;
-import com.centralesupelec.ipfs.ipfsplayer.SettingAdapter;
+import com.example.wassim.musicoinplayer.R;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 

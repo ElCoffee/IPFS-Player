@@ -1,4 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer;
+package com.example.wassim.musicoinplayer;
 
 public class SongDescriptor {
     private String songname;

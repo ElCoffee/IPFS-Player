@@ -16,7 +16,6 @@ class IPFSDaemonService : IntentService("IPFSDaemonService") {
     internal var NOTIFICATION_ID = 12345
 
     override fun onHandleIntent(intent: Intent) {
-        Log.d("zboub", "IPFSDaemonService started");
         val exitIntent = Intent(this, IPFSDaemonService::class.java)
         exitIntent.action = "STOP"
         val pendingExit = PendingIntent.getService(this, 0, exitIntent, 0)
@@ -25,6 +24,7 @@ class IPFSDaemonService : IntentService("IPFSDaemonService") {
             daemon = IPFSDaemon(baseContext).run("daemon")
             State.isDaemonRunning = true
             daemon!!.waitFor()
+            Log.d("zboub", "IPFSDaemonService started");
         } catch (e: InterruptedException) {
             e.printStackTrace()
         }

@@ -1,9 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
+package com.example.wassim.musicoinplayer;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,27 +8,22 @@ import android.graphics.Color;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.ListView;
 import android.widget.Toast;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Random;
 
 // import du MainActivity
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.widget.TextView;
+
 
 public class PlayerActivity extends Activity implements OnCompletionListener, SeekBar.OnSeekBarChangeListener {
 

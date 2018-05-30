@@ -1,4 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer.fragments;
+package com.example.wassim.musicoinplayer.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,8 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.centralesupelec.ipfs.ipfsplayer.MainActivity;
-import com.centralesupelec.ipfs.ipfsplayer.R;
+import com.example.wassim.musicoinplayer.MainActivity;
+import com.example.wassim.musicoinplayer.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

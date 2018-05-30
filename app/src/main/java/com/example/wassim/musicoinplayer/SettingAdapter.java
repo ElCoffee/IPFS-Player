@@ -1,4 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer;
+package com.example.wassim.musicoinplayer;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.widget.TextView;
-
-import com.centralesupelec.ipfs.ipfsplayer.R;
 
 public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.ViewHolder> {
     private String[] mDataset;

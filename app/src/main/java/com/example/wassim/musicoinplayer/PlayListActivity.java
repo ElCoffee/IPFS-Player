@@ -1,7 +1,4 @@
-package com.centralesupelec.ipfs.ipfsplayer;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+package com.example.wassim.musicoinplayer;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -12,6 +9,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class PlayListActivity extends ListActivity {
