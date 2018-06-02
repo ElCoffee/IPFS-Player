@@ -3,6 +3,7 @@ package com.example.wassim.musicoinplayer;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -49,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public static String title;
     private int currentView;
     Context context;
-
+    private static final String isFirstStart = "PREFS";
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.add(R.id.main_container, displayedFragment);
         ft.commit();
+
 
         sm = new SongsManager();
         playlist = sm.getPlayList();
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     20);
         }
-
+        /*
         //IPFS Node
         context = getApplicationContext();
 
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         ipfsDaemon.download(MainActivity.this,true);
 
         startService(new Intent(MainActivity.this, IPFSDaemonService.class));
-
+        */
     }
 
     public void onNavBarClicked(View view) {

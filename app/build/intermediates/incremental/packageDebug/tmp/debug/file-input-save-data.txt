@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Jun 02 23:16:13 CEST 2018
+#Sun Jun 03 01:26:28 CEST 2018
 1.base=/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/assets/debug
 2.path=x86
 0.baseType=DIRECTORY
