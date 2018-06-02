@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView currImv;
     private static final String HASH = "QmTfCkcHCNuTkLU5e54ofRnF17dzxxQmmuwgb86bsArqwv";
    // private IPFSDaemon ipfsDaemon = new IPFSDaemon(this);
-   private FragmentManager fragmentManager;
+    private FragmentManager fragmentManager;
     private Fragment displayedFragment;
     private HashMap<String, Fragment> fragments;
     private ArrayList<HashMap<String, String>> playlist;
@@ -88,9 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         startService(new Intent(MainActivity.this, IPFSDaemonService.class));
 
-        /*
-        IPFSGetTask getAsync = new IPFSGetTask();
-        getAsync.execute(HASH);*/
     }
 
     public void onNavBarClicked(View view) {
@@ -173,72 +170,5 @@ public class MainActivity extends AppCompatActivity {
         return sm;
     }
 
-    //Noeud IPFS
-    private class IPFSGetTask extends AsyncTask<String, Integer, byte[]> {
-
-        byte[] fileContents;
-
-        @Override
-        protected byte[] doInBackground(String... strings) {
-/*
-            context = getApplicationContext();
-            IPFSDaemon ipfsDaemon = new IPFSDaemon(getApplicationContext());
-
-            ipfsDaemon.download(MainActivity.this,true);
-
-            startService(new Intent(MainActivity.this, IPFSDaemonService.class));
-*/
-            IPFSConnection ipfs1 = new IPFS().getGet().getIpfs();
-
-            VersionInfo version = null;
-            version = new Info(ipfs1).version();
-
-
-
-            Log.i("IPFS", "IPFS Base URL = " + ipfs1.getBase_url());
-            ResponseBody rb = ipfs1.callCmd("cat/" + strings[0]);
-
-            Log.i("IPFS", "essou ");
-
-            try {
-                fileContents = rb.bytes();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            FileOutputStream outputStream;
-            try {
-                //File file = createTempFile("song", ".mp3");
-                File file = new File(getExternalFilesDir(null), "song.mp3");
-                outputStream = new FileOutputStream(file);
-                outputStream.write(fileContents);
-                outputStream.close();
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), Uri.fromFile(file));
-                mp.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(byte[] fileContents) {
-
-            FileOutputStream outputStream;
-            try {
-                //File file = createTempFile("song", ".mp3");
-                File file = new File(getExternalFilesDir(null), "song.mp3");
-                outputStream = new FileOutputStream(file);
-                outputStream.write(fileContents);
-                outputStream.close();
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), Uri.fromFile(file));
-                mp.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-    }
 
 }

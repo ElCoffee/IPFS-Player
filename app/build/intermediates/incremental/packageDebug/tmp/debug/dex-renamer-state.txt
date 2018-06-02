@@ -1,7 +1,4 @@
-#Sun May 27 14:56:07 CEST 2018
-base.0=/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/transforms/dexMerger/debug/12
-path.1=classes.dex
-renamed.1=classes2.dex
+#Sat Jun 02 23:16:12 CEST 2018
+base.0=/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/transforms/dexMerger/debug/14
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/transforms/dexMerger/debug/13

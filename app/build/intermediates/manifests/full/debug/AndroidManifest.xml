@@ -43,6 +43,11 @@
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:name="com.example.wassim.musicoinplayer.SettingAdapter"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="com.example.wassim.musicoinplayer.PlayerActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name" >

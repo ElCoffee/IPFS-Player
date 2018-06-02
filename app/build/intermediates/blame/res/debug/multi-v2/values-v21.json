@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/res/values-v21/values-v21.xml",

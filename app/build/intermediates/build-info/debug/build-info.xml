@@ -6,7 +6,7 @@
     density="xxxhdpi"
     format="10"
     plugin-version="3.1.1"
-    timestamp="1527425772221"
+    timestamp="1527972419797"
     token="-8285135234057361191"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -24,28 +24,58 @@
         duration="0" />
 
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
         location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
         location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
+        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
         location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -54,39 +84,72 @@
         location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1527425772221"
+        timestamp="1527972419797"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
+            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -95,10 +158,13 @@
             location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 

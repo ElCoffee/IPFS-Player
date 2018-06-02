@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
 MERGED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/sofiane/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/a513f70b2ff4a214a7830ed2705304b5/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:preference-v14:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/preference-v14-26.1.0.aar/6ccadcbaf851fb54711341c66b42e5c3/AndroidManifest.xml:17:1-28:12
@@ -20,27 +20,27 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /home/sofiane/.gradl
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/5c07ad7019f77111d6ed651a7155d2ba/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a2eafc86bf6b39e50dd97b8a30110fc7/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f8068fea40622757c874dc87eadc783e/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:3:5-48
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:1-59:12
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:1-64:12
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:5-43
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:5-43
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:5-43
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/sofiane/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/a513f70b2ff4a214a7830ed2705304b5/AndroidManifest.xml:5:5-7:41
@@ -73,32 +73,32 @@ MERGED from [com.android.support:support-compat:26.1.0] /home/sofiane/.gradle/ca
 MERGED from [com.android.support:support-compat:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a2eafc86bf6b39e50dd97b8a30110fc7/AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f8068fea40622757c874dc87eadc783e/AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f8068fea40622757c874dc87eadc783e/AndroidManifest.xml:20:5-22:41
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:5-43
-INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:5-43
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:5-43
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:7:15-40
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
-		INJECTED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:7:15-40
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:8:5-79
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:8:22-77
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:8:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:9:5-80
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:9:5-80
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:9:22-78
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:9:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:10:5-66
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:10:5-66
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:10:22-64
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:10:22-64
 application
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:12:5-57:19
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:12:5-62:19
 MERGED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/sofiane/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/a513f70b2ff4a214a7830ed2705304b5/AndroidManifest.xml:9:5-20
@@ -132,73 +132,81 @@ MERGED from [com.android.support:support-compat:26.1.0] /home/sofiane/.gradle/ca
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f8068fea40622757c874dc87eadc783e/AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f8068fea40622757c874dc87eadc783e/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:15:9-41
 	android:hardwareAccelerated
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:16:9-44
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:16:9-44
 	android:roundIcon
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:18:9-54
 	android:largeHeap
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:17:9-33
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:17:9-33
 	android:icon
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:14:9-45
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:14:9-45
 	android:allowBackup
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:20:9-40
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:20:9-40
 activity#com.example.wassim.musicoinplayer.MainActivity
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:23:9-32:20
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:23:9-32:20
 	android:label
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:25:13-45
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:25:13-45
 	android:configChanges
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:26:13-63
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:26:13-63
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:24:13-41
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:24:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:27:13-31:29
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:28:25-66
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:30:27-74
 activity#com.example.wassim.musicoinplayer.DisplayPlaylistActivity
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:34:9-38:20
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:34:9-38:20
 	android:label
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:36:13-45
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:36:13-45
 	android:configChanges
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:37:13-63
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:37:13-63
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:35:13-52
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:35:13-52
 activity#com.example.wassim.musicoinplayer.PlayListManagerActivity
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:40:9-44:20
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:40:9-44:20
 	android:label
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:42:13-45
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:42:13-45
 	android:configChanges
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:43:13-63
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:43:13-63
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:41:13-52
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:41:13-52
+activity#com.example.wassim.musicoinplayer.SettingAdapter
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:45:9-49:20
+	android:label
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:47:13-45
+	android:configChanges
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:48:13-63
+	android:name
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:46:13-43
 activity#com.example.wassim.musicoinplayer.PlayerActivity
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:46:9-50:20
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:51:9-55:20
 	android:label
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:48:13-45
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:53:13-45
 	android:configChanges
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:49:13-63
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:54:13-63
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:47:13-43
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:52:13-43
 meta-data#preloaded_fonts
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:52:9-54:57
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:57:9-59:57
 	android:resource
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:54:13-54
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:59:13-54
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:53:13-43
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:58:13-43
 service#com.example.wassim.musicoinplayer.IPFSDaemonService
-ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:56:9-63
+ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:61:9-63
 	android:name
-		ADDED from /home/sofiane/AndroidStudioProjects/lagrossebitadudu/app/src/main/AndroidManifest.xml:56:18-51
+		ADDED from /home/sofiane/AndroidStudioProjects/izworking/app/src/main/AndroidManifest.xml:61:18-51
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6f3f9e777b454e2f901d3385b72f152b/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:preference-v14:26.1.0] /home/sofiane/.gradle/caches/transforms-1/files-1.1/preference-v14-26.1.0.aar/6ccadcbaf851fb54711341c66b42e5c3/AndroidManifest.xml:23:9-25:38
