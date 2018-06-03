@@ -1,4 +1,4 @@
-#Sun Jun 03 04:09:40 CEST 2018
+#Sun Jun 03 04:37:12 CEST 2018
 base.0=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/transforms/dexMerger/debug/4
 path.0=classes.dex
 renamed.0=classes.dex

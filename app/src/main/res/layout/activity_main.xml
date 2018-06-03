@@ -8,15 +8,11 @@
     android:background="@drawable/fond"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:id="@+id/main_container"
-        android:layout_width="fill_parent"
-        android:layout_height="60dip"
-        android:background="@layout/bg_player_header"
-        android:layout_alignParentTop="true"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp">
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageButton
             android:id="@+id/btn_server"
@@ -150,7 +146,7 @@
                     android:layout_weight="1"
                     android:padding="2dp"
                     android:duplicateParentState="true"
-                app:srcCompat="@drawable/parametres" />
+                    app:srcCompat="@drawable/parametres" />
 
                 <TextView
                     android:id="@+id/textView9"

@@ -11,6 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="60dip"
         android:layout_alignParentTop="true"
+        android:background="@layout/bg_player_header"
         android:paddingLeft="5dp"
         android:paddingRight="5dp">
 
@@ -39,6 +40,14 @@
             android:textSize="32dp"
             android:textStyle="bold" />
 
+        <ImageButton
+            android:id="@+id/btn_server"
+            android:layout_width="56dp"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/btn_play" />
 
     </RelativeLayout>
 
