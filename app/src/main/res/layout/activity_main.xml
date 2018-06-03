@@ -10,39 +10,25 @@
 
     <RelativeLayout
         android:id="@+id/main_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="@layout/bg_player_header"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
-        <!--<fragment-->
-            <!--android:id="@+id/container_fragment"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="0dp"-->
-            <!--/>-->
 
-        <!--<fragment
-            android:id="@+id/search_view"
-            layout="@layout/search_fragment"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            />
+        <ImageButton
+            android:id="@+id/btn_server"
+            android:layout_width="56dp"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/btn_play" />
 
-        <fragment
-            android:id="@+id/playlists_view"
-            layout="@layout/playlists_fragment"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            />
 
-        <fragment
-            android:id="@+id/settings_view"
-            layout="@layout/settings_fragment"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            />-->
+
 
     </RelativeLayout>
 

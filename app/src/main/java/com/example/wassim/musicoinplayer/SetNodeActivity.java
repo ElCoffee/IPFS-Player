@@ -1,9 +1,13 @@
 package com.example.wassim.musicoinplayer;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,6 +30,15 @@ public class SetNodeActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setnode);
+
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    20);
+        }
 
         btn_setNode = (Button) findViewById(R.id.btn_setNode);
         text_setnodelater = (TextView) findViewById(R.id.text_setnodelater);
@@ -53,11 +66,6 @@ public class SetNodeActivity extends AppCompatActivity {
     public void login() {
         Log.d(TAG, "Login");
 
-        if (!setNode()) {
-            onLoginFailed();
-            return;
-        }
-
         btn_setNode.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(SetNodeActivity.this,
@@ -76,7 +84,12 @@ public class SetNodeActivity extends AppCompatActivity {
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 1000);
+
+        Intent launchMain = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(launchMain, 101);
+
+
     }
 
 
@@ -103,14 +116,7 @@ public class SetNodeActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-
-        btn_setNode.setEnabled(true);
-    }
-
-    public boolean setNode() {
-        boolean valid = true;
+    public void setNode() {
 
         //IPFS Node
         context = getApplicationContext();
@@ -120,8 +126,6 @@ public class SetNodeActivity extends AppCompatActivity {
         ipfsDaemon.download(SetNodeActivity.this,true);
 
         startService(new Intent(SetNodeActivity.this, IPFSDaemonService.class));
-        Intent launchMain = new Intent(getApplicationContext(), MainActivity.class);
-        startActivityForResult(launchMain, 101);
-        return valid;
+
     }
 }

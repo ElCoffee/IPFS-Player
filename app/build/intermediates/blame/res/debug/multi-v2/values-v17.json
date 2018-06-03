@@ -1,21 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
+            "outputFile": "/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/home/sofiane/.gradle/caches/transforms-1/files-1.1/preference-v7-26.1.0.aar/1f0180da07f420fcb4bac608798579b5/res/values-v17/values-v17.xml",
+                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/preference-v14-26.1.0.aar/12b4c4d6e2d8d8b08ea906e46602ef78/res/values-v17/values-v17.xml",
                     "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,280",
-                        "endLines": "6,10",
-                        "endColumns": "12,12",
-                        "endOffsets": "275,436"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "218"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "441",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "604"
                     }
                 },
                 {
-                    "source": "/home/sofiane/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/1ed504bfb0d2317b3a9c924818cef19d/res/values-v17/values-v17.xml",
+                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/da5dc49ffb55e678aab1d7af25fb8bfa/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,22 +42,14 @@
                     }
                 },
                 {
-                    "source": "/home/sofiane/.gradle/caches/transforms-1/files-1.1/preference-v14-26.1.0.aar/6ccadcbaf851fb54711341c66b42e5c3/res/values-v17/values-v17.xml",
+                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/preference-v7-26.1.0.aar/51aa7cc596d567efd8aeeda2720c732a/res/values-v17/values-v17.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "218"
-                    },
-                    "to": {
-                        "startLines": "11",
-                        "startColumns": "4",
-                        "startOffsets": "441",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "604"
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,280",
+                        "endLines": "6,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "275,436"
                     }
                 }
             ]

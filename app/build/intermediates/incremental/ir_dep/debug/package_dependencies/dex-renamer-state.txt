@@ -1,4 +1,4 @@
-#Sat Jun 02 22:46:34 CEST 2018
-base.0=/home/sofiane/AndroidStudioProjects/izworking/app/build/intermediates/transforms/dexMerger/debug/10
+#Sun Jun 03 04:01:46 CEST 2018
+base.0=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/transforms/dexMerger/debug/11
 path.0=classes.dex
 renamed.0=classes.dex

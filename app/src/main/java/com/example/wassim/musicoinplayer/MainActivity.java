@@ -17,6 +17,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.wassim.musicoinplayer.fragments.DiscoverFragment;
@@ -50,8 +51,9 @@ public class MainActivity extends AppCompatActivity {
     public static String title;
     private int currentView;
     Context context;
-    private static final String isFirstStart = "PREFS";
-    SharedPreferences sharedPreferences;
+    //private static final String isFirstStart = "PREFS";
+    //SharedPreferences sharedPreferences;
+    private ImageButton btnServer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +62,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         fragmentManager = getSupportFragmentManager();
-
         displayedFragment = new DiscoverFragment();
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.add(R.id.main_container, displayedFragment);
         ft.commit();
-
 
         sm = new SongsManager();
         playlist = sm.getPlayList();
@@ -73,15 +73,28 @@ public class MainActivity extends AppCompatActivity {
         fragments = new HashMap<String, Fragment>();
         fragments.put("discover", displayedFragment);
 
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
+        //SERVER BUTTON
+        btnServer = (ImageButton) findViewById(R.id.btn_server);
+        btnServer.setOnClickListener(new View.OnClickListener() {
 
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    20);
-        }
-        /*
+            @Override
+            public void onClick(View arg0) {
+                // check for already playing
+                if(serverIsRunning()){
+                    startServer();
+                    btnServer.setImageResource(R.drawable.btn_play);
+                }else{
+                    stopServer();
+                    btnServer.setImageResource(R.drawable.btn_pause);
+                    }
+                }
+
+        });
+
+    }
+
+    //START IPFS SERVER
+    public void startServer(){
         //IPFS Node
         context = getApplicationContext();
 
@@ -90,7 +103,17 @@ public class MainActivity extends AppCompatActivity {
         ipfsDaemon.download(MainActivity.this,true);
 
         startService(new Intent(MainActivity.this, IPFSDaemonService.class));
-        */
+    }
+
+    //STOP IPFS SERVER
+    public void stopServer(){
+        //A IMPLEMENTER
+    }
+
+    //SERVER RUNNING?
+    public boolean serverIsRunning(){
+        //A IMPLEMENTER
+        return false;
     }
 
     public void onNavBarClicked(View view) {

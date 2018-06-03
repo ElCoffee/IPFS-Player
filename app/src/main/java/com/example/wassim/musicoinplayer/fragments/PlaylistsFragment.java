@@ -2,6 +2,7 @@ package com.example.wassim.musicoinplayer.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -21,7 +22,7 @@ import com.example.wassim.musicoinplayer.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class PlaylistsFragment extends Fragment {
+public class PlaylistsFragment extends DialogFragment {
     private ArrayList<HashMap<String, String>> playlist;
     private ListView mainList;
     private MainActivity parentActivity;
@@ -30,6 +31,7 @@ public class PlaylistsFragment extends Fragment {
     private EditText playlistNameInput;
     private ImageButton btnAdd;
     private ListView lvItem;
+
 
     private ArrayList<String> playlistNames;
     private ArrayAdapter<String> playlistNamesAdapter;

@@ -25,7 +25,7 @@ import java.util.Random;
 // import du MainActivity
 
 
-public class PlayerActivity extends Activity implements OnCompletionListener, SeekBar.OnSeekBarChangeListener {
+public class PlayerActivity extends Activity implements MediaPlayer.OnCompletionListener, SeekBar.OnSeekBarChangeListener {
 
     private ImageButton btnPlay;
     private ImageButton btnNext;
