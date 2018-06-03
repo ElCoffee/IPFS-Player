@@ -18,8 +18,13 @@ import android.widget.ListView;
 import com.example.wassim.musicoinplayer.MainActivity;
 import com.example.wassim.musicoinplayer.R;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import io.ipfs.kotlin.IPFS;
+import io.ipfs.kotlin.IPFSConnection;
+import io.ipfs.kotlin.commands.Add;
 
 public class SearchFragment extends Fragment {
     private ArrayList<HashMap<String, String>> playlist;
@@ -86,22 +91,13 @@ public class SearchFragment extends Fragment {
 
     public String getFileName(Uri uri) {
         String result = null;
-        if (uri.getScheme().equals("content")) {
-            Cursor cursor = getActivity().getContentResolver().query(uri, null, null, null, null);
-            try {
-                if (cursor != null && cursor.moveToFirst()) {
-                    result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
-                }
-            } finally {
-                cursor.close();
-            }
-        }
+
         if (result == null) {
             result = uri.getPath();
-            int cut = result.lastIndexOf('/');
-            if (cut != -1) {
-                result = result.substring(cut + 1);
-            }
+            File tempf = new File(result);
+            IPFS ipfs = new IPFS();
+            String fileHash = ipfs.getAdd().file(tempf).getHash();
+            Log.d("IPFS", fileHash);
         }
         return result;
     }

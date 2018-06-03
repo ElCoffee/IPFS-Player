@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jun 03 15:06:29 CEST 2018
+#Sun Jun 03 21:55:34 CEST 2018
 2.base=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\assets\\debug
 0.path=version
 2.baseType=DIRECTORY
