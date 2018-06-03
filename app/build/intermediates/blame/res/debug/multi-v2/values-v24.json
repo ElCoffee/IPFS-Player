@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "D:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/da5dc49ffb55e678aab1d7af25fb8bfa/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,212,347,416,480,549",
-                        "endColumns": "156,134,68,63,68,69",
-                        "endOffsets": "207,342,411,475,544,614"
-                    }
-                },
-                {
-                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/80c715c1b0481c432236669639868a74/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\8d7bd629bddb0c663a75f2882c677333\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "619,685,746,812",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "680,741,807,874"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14ec26b8402f569cecebbfc69254df9d\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,212,347,416,480,549",
+                        "endColumns": "156,134,68,63,68,69",
+                        "endOffsets": "207,342,411,475,544,614"
                     }
                 }
             ]

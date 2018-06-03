@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "D:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/da5dc49ffb55e678aab1d7af25fb8bfa/res/values-v26/values-v26.xml",
+                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14ec26b8402f569cecebbfc69254df9d\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4f30112d1623316e0c26b6673bfa8756/res/values-v26/values-v26.xml",
+                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\62f86ac94936d02e6b2bd864202c3e1d\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
