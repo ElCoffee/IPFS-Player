@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IPFS-Player.iml" filepath="$PROJECT_DIR$/IPFS-Player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPFS-Player.iml" filepath="$PROJECT_DIR$/IPFS-Player.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/ipfs-api-kotlin-master/ipfs-api-kotlin-master.iml" filepath="$PROJECT_DIR$/libs/ipfs-api-kotlin-master/ipfs-api-kotlin-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />

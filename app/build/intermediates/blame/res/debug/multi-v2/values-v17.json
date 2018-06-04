@@ -1,21 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\preference-v7-26.1.0.aar\\911210e48115fae2db263ec1ecac9888\\res\\values-v17\\values-v17.xml",
-                    "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,280",
-                        "endLines": "6,10",
-                        "endColumns": "12,12",
-                        "endOffsets": "275,436"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\preference-v14-26.1.0.aar\\a3f55919436cd9d08fa224594a039a6a\\res\\values-v17\\values-v17.xml",
+                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/preference-v14-26.1.0.aar/12b4c4d6e2d8d8b08ea906e46602ef78/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -34,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Wassim\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14ec26b8402f569cecebbfc69254df9d\\res\\values-v17\\values-v17.xml",
+                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/da5dc49ffb55e678aab1d7af25fb8bfa/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -50,6 +39,17 @@
                         "endLines": "17,21,24,27,30,34,38,41,44,47,51,54,58,62",
                         "endColumns": "12,12,12,12,12,12,12,12,12,12,12,12,12,12",
                         "endOffsets": "777,1005,1163,1313,1485,1713,1955,2126,2300,2469,2742,2942,3146,3475"
+                    }
+                },
+                {
+                    "source": "/Users/Theophile/.gradle/caches/transforms-1/files-1.1/preference-v7-26.1.0.aar/51aa7cc596d567efd8aeeda2720c732a/res/values-v17/values-v17.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,280",
+                        "endLines": "6,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "275,436"
                     }
                 }
             ]

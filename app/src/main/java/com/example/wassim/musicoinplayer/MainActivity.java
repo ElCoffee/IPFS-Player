@@ -15,10 +15,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.wassim.musicoinplayer.fragments.DiscoverFragment;
 import com.example.wassim.musicoinplayer.fragments.PlaylistsFragment;
@@ -55,12 +60,19 @@ public class MainActivity extends AppCompatActivity {
     //SharedPreferences sharedPreferences;
     private ImageButton btnServer;
 
+    //SERVICE
+    private Intent playerService;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // importé d'aymeric
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //SERVICE
+        playerService = new Intent(MainActivity.this, PlayerService.class);
+        startService(playerService);
 
+        //importé d'Aymeric
         fragmentManager = getSupportFragmentManager();
         displayedFragment = new DiscoverFragment();
         FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -92,6 +104,25 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    //SERVICE
+
+
+
+/*    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == 100){
+            currentSongIndex = data.getExtras().getInt("songIndex");
+            // play selected song
+            Toast ts = Toast.makeText(getApplication().getBaseContext(),"Working", Toast.LENGTH_SHORT);
+            ts.show();
+            playSong(currentSongIndex);
+        }
+
+    }*/
+
+
+
 
     //START IPFS SERVER
     public void startServer(){
@@ -177,14 +208,13 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if(mp != null) mp.release();
-    }
-
+//PEUT ETRE CHANGER LA CLASSE DANS LA FONCTION
     public void playSong(int songIndex) {
+        Toast ts2 = Toast.makeText(getApplication().getBaseContext(),"Working2", Toast.LENGTH_SHORT);
+        ts2.show();
+        //setContentView(R.layout.player3);
         mp = MediaPlayer.create(getApplicationContext(), Uri.parse(playlist.get(songIndex).get("songPath")));
+        mp.start();
 
         Intent playSongIntent = new Intent(getApplicationContext(), PlayerActivity.class);
         playSongIntent.putExtra("songIndex", songIndex);

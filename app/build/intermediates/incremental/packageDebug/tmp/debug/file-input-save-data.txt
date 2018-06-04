@@ -1,23 +1,23 @@
 #Internal package file, do not edit.
-#Sun Jun 03 21:55:34 CEST 2018
-2.base=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\assets\\debug
-0.path=version
+#Mon Jun 04 13:45:48 CEST 2018
+2.base=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/transforms/dexMerger/debug/12
+0.path=x86
 2.baseType=DIRECTORY
-3.base=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
-2.set=ASSET
-1.path=x86
-4.base=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+3.base=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/assets/debug
+2.set=DEX
+1.path=version
+4.base=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/transforms/dexMerger/debug/13
 count=5
-2.path=arm
+2.path=classes.dex
 4.set=DEX
-3.path=classes.dex
+3.path=arm
 3.baseType=DIRECTORY
 1.set=ASSET
 4.path=classes.dex
 1.baseType=DIRECTORY
-0.base=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\assets\\debug
+0.base=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/assets/debug
 0.baseType=DIRECTORY
-3.set=DEX
-1.base=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\assets\\debug
+3.set=ASSET
+1.base=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/assets/debug
 4.baseType=DIRECTORY
 0.set=ASSET

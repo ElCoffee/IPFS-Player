@@ -82,6 +82,8 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="60dp" />
 
+
+
     <EditText
         android:id="@+id/playlistName_input"
         android:layout_width="wrap_content"

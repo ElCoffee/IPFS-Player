@@ -28,10 +28,18 @@
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:name="com.example.wassim.musicoinplayer.PlayerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="com.example.wassim.musicoinplayer.DisplayPlaylistActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name" >
         </activity>
+
+        <service android:name="com.example.wassim.musicoinplayer.PlayerService" />
+
         <activity
             android:name="com.example.wassim.musicoinplayer.PlayListManagerActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -46,11 +54,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.wassim.musicoinplayer.PlayerActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:label="@string/app_name" >
         </activity>
 
         <meta-data

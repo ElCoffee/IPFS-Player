@@ -1,4 +1,4 @@
-#Sun Jun 03 21:55:30 CEST 2018
-base.0=D\:\\Projet_Blockchain\\final\\IPFS-Player\\IPFS-Player\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+#Mon Jun 04 13:45:44 CEST 2018
+base.0=/Users/Theophile/Documents/GitHub/IPFS-Player/app/build/intermediates/transforms/dexMerger/debug/9
 path.0=classes.dex
 renamed.0=classes.dex
