@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_decouvrir"
+        android:enabled="true"
+        android:icon="@drawable/ic_parametres"
+        android:title="@string/title_decouvrir"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_rechercher"
+        android:enabled="true"
+        android:icon="@drawable/ic_parametres"
+        android:title="@string/title_rechercher"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/navigation_playlists"
+        android:enabled="true"
+        android:icon="@drawable/ic_parametres"
+        android:title="@string/title_playlists"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_parametres"
+        android:enabled="true"
+        android:icon="@drawable/ic_parametres"
+        android:title="@string/title_parametres"
+        app:showAsAction="always|withText"/>
+
+
+<!--    <item
+        android:id="@+id/navigation_parametres"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_parametres"/>-->
+
+
+</menu>

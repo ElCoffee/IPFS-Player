@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_syncConnectionTypes_entries">
+        <item>Aaaa</item>
+        <item>Bbbb</item>
+        <item>Cccc</item>
+    </array>
+    <array name="pref_syncConnectionTypes_values">
+        <item>Aaaa</item>
+        <item>Bbbb</item>
+        <item>Cccc</item>
+    </array>
+</resources>

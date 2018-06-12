@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_container"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_above="@+id/player_footer_bg"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/playerBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#fbcc33">
+
+            <ImageView
+                android:id="@+id/coverplaying"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                app:srcCompat="@drawable/adele"
+                android:adjustViewBounds="true"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/coverplaying"
+                android:orientation="vertical">
+                <!-- Progress Bar/Seek bar -->
+                <ProgressBar
+                    android:id="@+id/songProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="-8dp"
+                    android:maxHeight="5dp"
+                    android:progress="67"
+                    android:tag="tint_accent_color" />
+
+                <TextView
+                    android:id="@+id/titleplaying"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="42dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:text="SUPELEC EST LA"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/artistplaying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginLeft="12dp"
+                    android:ellipsize="end"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textSize="13sp"
+                    android:text="by zeubila mocuhe"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <!-- Play Button -->
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/btn_play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_footer_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="@layout/bg_player_header"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onNavBarClicked"
+                android:tag="discover"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewDiscover"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:duplicateParentState="true"
+                    app:srcCompat="@drawable/decouvrir" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:duplicateParentState="true"
+                    android:text="Découvrir" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onNavBarClicked"
+                android:tag="search"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:duplicateParentState="true"
+                    app:srcCompat="@drawable/rechercher" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:duplicateParentState="true"
+                    android:text="Rechercher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onNavBarClicked"
+                android:tag="playlists"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewPlaylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:duplicateParentState="true"
+                    app:srcCompat="@drawable/playlist"/>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:duplicateParentState="true"
+                    android:text="Playlists" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onNavBarClicked"
+                android:tag="settings"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/parametres" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="Paramètres" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- Progress Bar/Seek bar -->
+    <!-- Timer Display -->
+</RelativeLayout>

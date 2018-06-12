@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IPFS Player</string>
+    <string name="title_decouvrir">Découvrir</string>
+    <string name="title_rechercher">Rechercher</string>
+    <string name="title_playlists">Playlists</string>
+    <string name="title_parametres">Paramètres</string>
+</resources>

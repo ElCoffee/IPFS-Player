@@ -1,0 +1,96 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <RelativeLayout
+            android:id="@+id/player_header_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="IPFS Player"
+                android:textAlignment="center"
+                android:textColor="#f7b832"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="IPFS Player"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/address1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:lines="4"
+            android:maxLines="4"
+            android:text="You can switch on or off the server (IPFS node) anytime by pressing the button at the top left corner of the screen."
+            android:textAlignment="center"
+            android:textAllCaps="false"></TextView>
+
+        <ImageView
+            android:id="@+id/LOGOAPPLI"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/btn_play" />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_setNode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="SET IPFS NODE" />
+
+        <TextView
+            android:id="@+id/text_setnodelater"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Set up later"
+            android:textSize="16dip" />
+
+    </LinearLayout>
+</ScrollView>

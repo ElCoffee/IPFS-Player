@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="@layout/bg_player_header"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/title_playlists"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="PLAYLISTS"
+            android:textAlignment="center"
+            android:textColor="#f7b832"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_playlists2"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="PLAYLISTS"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_addPlaylist"
+            android:layout_width="56dp"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:layout_alignEnd="@id/title_playlists"
+            android:src="@drawable/btn_plus" />
+
+        <ImageButton
+            android:id="@+id/btn_server"
+            android:layout_width="56dp"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/btn_play" />
+
+
+
+
+
+    </RelativeLayout>
+
+    <!--LISTE DES PLAYLISTS-->
+
+    <ListView
+        android:id="@+id/playlists_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#dddddd"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@drawable/list_selector"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp" />
+
+    <EditText
+        android:id="@+id/playlistName_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="89dp"
+        android:layout_weight="1"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
