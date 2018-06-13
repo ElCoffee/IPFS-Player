@@ -12,11 +12,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.squareup.picasso.Picasso;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+
 import io.ipfs.kotlin.IPFS;
 import io.ipfs.kotlin.IPFSConnection;
 import okhttp3.ResponseBody;
@@ -87,7 +90,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 // File file = createTempFile("song", ".mp3");
                 Log.d("DoInBG", title);
 
-                File file = new File(MEDIA_PATH, artist+"-"+title+".mp3");
+                File file = new File(MEDIA_PATH, artist+" - "+title+".mp3");
                 outputStream = new FileOutputStream(file);
                 outputStream.write(fileContents);
                 outputStream.close();

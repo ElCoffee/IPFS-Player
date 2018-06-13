@@ -11,9 +11,9 @@ import java.util.HashMap;
 
 public class SongsManager {
 
-    final String MEDIA_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getPath() + "/";
-    private ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
-    private String mp3Pattern = ".mp3";
+    static final String MEDIA_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getPath() + "/";
+    private static ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
+    private static String mp3Pattern = ".mp3";
 
     /**
      * Function to read all mp3 files from sdcard
@@ -26,7 +26,7 @@ public class SongsManager {
         return songsList;
     }
 
-    private void updatePlaylist() {
+    public static void updatePlaylist() {
         if (MEDIA_PATH != null) {
             File home = new File(MEDIA_PATH);
             Log.d("PATH", Boolean.toString(home.isDirectory()));
@@ -44,7 +44,7 @@ public class SongsManager {
         }
     }
 
-    private void scanDirectory(File directory) {
+    private static void scanDirectory(File directory) {
         if (directory != null) {
             File[] listFiles = directory.listFiles();
             if (listFiles != null && listFiles.length > 0) {
@@ -60,7 +60,7 @@ public class SongsManager {
         }
     }
 
-    private void addSongToList(File song) {
+    private static void addSongToList(File song) {
         if (song.getName().endsWith(mp3Pattern)) {
             HashMap<String, String> songMap = new HashMap<String, String>();
             songMap.put("songTitle",
