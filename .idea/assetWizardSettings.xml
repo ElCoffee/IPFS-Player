@@ -19,9 +19,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Documents/Covers/crazy_train.jpg" />
-                                      <entry key="foregroundLayerName" value="cover_crazy_train" />
-                                      <entry key="outputName" value="crazy_train" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Images/Covers/the_trooper.jpg" />
+                                      <entry key="foregroundLayerName" value="cover_trooper" />
+                                      <entry key="outputName" value="trooper" />
                                       <entry key="previewDensity" value="XXXHIGH" />
                                     </map>
                                   </option>
