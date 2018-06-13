@@ -6,6 +6,7 @@ public class SongDescriptor {
     private String album;
     private String path;
     private long id;
+    private String hash;
 
     public SongDescriptor() {
 
@@ -26,18 +27,21 @@ public class SongDescriptor {
 
     public long getID(){ return id; }
     public void setID(long id){ this.id = id; }
+
     public String getSongname() {
         return songname;
     }
     public void setSongname(String songname) {
         this.songname = songname;
     }
+
     public String getArtist() {
         return artist;
     }
     public void setArtist(String artist) {
         this.artist = artist;
     }
+
     public String getAlbum() {
         return album;
     }
@@ -46,4 +50,8 @@ public class SongDescriptor {
     }
 
     public void setPath(String Path) { this.path = Path; }
+    public String getPath() { return this.path; }
+
+    public void setHash(String hash) { this.hash = hash; }
+    public String getHash() { return this.hash; }
 }

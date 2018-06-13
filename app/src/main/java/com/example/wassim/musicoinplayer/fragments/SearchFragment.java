@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.wassim.musicoinplayer.FileUploader;
 import com.example.wassim.musicoinplayer.MainActivity;
 import com.example.wassim.musicoinplayer.R;
 
@@ -94,10 +95,7 @@ public class SearchFragment extends Fragment {
 
         if (result == null) {
             result = uri.getPath();
-            File tempf = new File(result);
-            IPFS ipfs = new IPFS();
-            String fileHash = ipfs.getAdd().file(tempf).getHash();
-            Log.d("IPFS", fileHash);
+            new FileUploader().execute(result);
         }
         return result;
     }

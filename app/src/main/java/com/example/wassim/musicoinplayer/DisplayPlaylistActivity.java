@@ -47,6 +47,17 @@ public class DisplayPlaylistActivity extends Activity {
         PlaylistList.setAdapter(adapter);
     }
 
+    //@Override
+    //protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    //    super.onActivityResult(requestCode, resultCode, data);
+    //    if(resultCode == 100){
+    //        String playlistTitle = data.getExtras().getString("playlistTitle");
+    //        File playlistDir = this.getDir("Playlists", Context.MODE_PRIVATE); //Creating an internal dir;
+    //        File fileWithinMyDir = new File(playlistDir, playlistTitle); //Getting a file within the dir.
+    //    }
+    //
+    //}
+
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
