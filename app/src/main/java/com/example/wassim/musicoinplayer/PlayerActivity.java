@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -18,10 +16,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
+import static com.example.wassim.musicoinplayer.PlayListActivity.songIndex;
 
 // import du MainActivity
 
@@ -46,7 +41,7 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     public static MediaPlayer mp;
 
     // Handler to update UI timer, progress bar etc,.
-    private static Handler mHandler = new Handler();
+    private static Handler mHandler;
     private SongsManager songsManager;
     private static Utilities utils;
     private int seekForwardTime = 5000; // 5000 milliseconds
@@ -55,18 +50,17 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     public static boolean isRepeat = false;
 
 
-    public static int currentSongIndex = PlayListActivity.songIndex;
+    public static int currentSongIndex = songIndex;
+
+    private static Runnable mUpdateTimeTask;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-        //PAGE D'ACCUEIL
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player3);
-        //Mp
 
+        mHandler = new Handler();
 
         // Boutons du player
         btnPlay = (ImageButton) findViewById(R.id.btnPlay);
@@ -86,25 +80,16 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
         coverImage = (ImageView) findViewById(R.id.cover);
 
-
-
-        // Mediaplayer
-
-        mp = PlayerService.mp;
         songsManager = new SongsManager();
         utils = new Utilities();
 
+        mp = PlayerService.mp;
 
         // Listener
         songProgressBar.setOnSeekBarChangeListener(this);
-
+        songProgressBar.setMax(100);
 
         PlayerService.songsList = songsManager.getPlayList();
-
-        PlayerService.mediaPlayerReady = false;
-
-        int songIndex = getIntent().getIntExtra("songIndex",-1);
-        playSong(songIndex);
 
         // Implémentation des boutons
 
@@ -148,33 +133,45 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     @Override
     public void onResume() {
         super.onResume();
-        updateTime();
-        updateProgressBar();
+        mUpdateTimeTask = new Runnable() {
+            public void run() {
+                long totalDuration = mp.getDuration();
+                long currentPosition = mp.getCurrentPosition();
+
+                // Displaying Total Duration time
+                songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
+                // Displaying time completed playing
+                songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentPosition));
+
+                // Updating progress bar
+                int progress = (int) (utils.getProgressPercentage(currentPosition, totalDuration));
+                //Log.d("Progress", ""+progress);
+                songProgressBar.setProgress(progress);
+                // Running this thread after 100 milliseconds
+                mHandler.postDelayed(this, 100);
+            }
+        };
+        int songIndex = getIntent().getIntExtra("songIndex",-1);
+        playSong(songIndex);
+        updateDisplayedMetadata(-1);
     }
 
     public void playAction(){
         PlayerService.playAction();
         if (PlayerService.getPlay()){
             btnPlay.setImageResource(R.drawable.btn_pause);
-        }else{
+        } else {
             btnPlay.setImageResource(R.drawable.btn_play);
         }
     }
 
-    private static void updateTime() {
+    private static void updateDisplayedMetadata(int songIndex) {
         if(PlayerService.mediaPlayerReady) {
-            long totalDuration = mp.getDuration();
-            long currentPosition = mp.getCurrentPosition();
-
-            // Displaying Total Duration time
-            songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
-            // Displaying time completed playing
-            songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentPosition));
-
-            // Updating progress bar
-            int progress = (int) (utils.getProgressPercentage(currentPosition, totalDuration));
-            //Log.d("Progress", ""+progress);
-            songProgressBar.setProgress(progress);
+            mUpdateTimeTask.run();
+            if(songIndex != -1) {
+                String songTitle = PlayerService.songsList.get(songIndex).get("songTitle");
+                songTitleLabel.setText(songTitle);
+            }
         }
     }
 
@@ -191,7 +188,7 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             isRepeat = false;
             Toast.makeText(getApplicationContext(), "Repeat is OFF", Toast.LENGTH_SHORT).show();
             btnRepeat.setImageResource(R.drawable.btn_repeat);
-        }else{
+        } else {
             // make repeat to true
             isRepeat = true;
             Toast.makeText(getApplicationContext(), "Repeat is ON", Toast.LENGTH_SHORT).show();
@@ -235,27 +232,10 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
     public static void playSong(int songIndex){
         // Play song
-        Log.d("Zoubi",String.valueOf(PlayListActivity.songIndex));
+        Log.d("Zoubi", String.valueOf(PlayListActivity.songIndex));
 
         int res = PlayerService.playSong(songIndex);
         btnPlay.setImageResource(R.drawable.btn_pause);
-        try {
-            String songTitle = PlayerService.songsList.get(songIndex).get("songTitle");
-            songTitleLabel.setText(songTitle);
-
-            // Changing Button Image to pause image
-
-            // set Progress bar values
-            songProgressBar.setProgress((res == -1) ? (int) (utils.getProgressPercentage(mp.getCurrentPosition(), mp.getDuration())) : 0);
-            songProgressBar.setMax(100);
-
-            // Updating progress bar
-            updateProgressBar();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (IllegalStateException e) {
-            e.printStackTrace();
-        }
 
         try {
             byte[] art = PlayerService.art;
@@ -286,22 +266,15 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             artist.setText("Unknown Artist");
             genre.setText("Unknown Genre");*/
         }
+
+        updateDisplayedMetadata(songIndex);
+        updateProgressBar();
     }
 
     public static void updateProgressBar(){
+        mHandler.removeCallbacks(mUpdateTimeTask);
         mHandler.postDelayed(mUpdateTimeTask, 100);
     }
-
-    private static Runnable mUpdateTimeTask = new Runnable() {
-        public void run() {
-            updateTime();
-        // Running this thread after 100 milliseconds
-        mHandler.postDelayed(this, 100);
-        }
-    };
-
-
-
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
@@ -332,10 +305,5 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     public void onPause() {
         super.onPause();
         mHandler.removeCallbacks(mUpdateTimeTask);
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
     }
 }

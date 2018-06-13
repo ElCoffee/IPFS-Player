@@ -38,6 +38,7 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        mediaPlayerReady = false;
         //mp = PlayerActivity.mp;
         if(mp == null) {
             mp = new MediaPlayer();
@@ -116,7 +117,6 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
                 mediaPlayerReady = true;
 
             } catch (IllegalArgumentException e) {
-
                 e.printStackTrace();
             } catch (IllegalStateException e) {
                 e.printStackTrace();
@@ -135,6 +135,8 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
             songTitle = metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
             return 0; // New song is being played
         }
+        if(mp.isPlaying() == false) mp.start();
+        mediaPlayerReady = true;
         return -1; // Nothing happens because requested song is the same;
     }
 
