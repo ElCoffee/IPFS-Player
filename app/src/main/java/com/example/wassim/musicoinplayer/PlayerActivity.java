@@ -103,7 +103,8 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
         PlayerService.mediaPlayerReady = false;
 
-        playSong(getIntent().getIntExtra("songIndex",2));
+        int songIndex = getIntent().getIntExtra("songIndex",-1);
+        playSong(songIndex);
 
         // Implémentation des boutons
 
@@ -114,9 +115,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
                 playAction();
             }
         });
-
-
-
         btnNext.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -124,8 +122,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
              nextAction();
             }
         });
-
-
         btnPrevious.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -133,8 +129,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
              previousAction();
             }
         });
-
-
         btnRepeat.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -142,7 +136,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
                 repeatAction();
             }
         });
-
         btnShuffle.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -150,18 +143,14 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
                 shuffleAction();
             }
         });
+    }
 
-/*        btnMenu.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent i = new Intent(getApplicationContext(), PlayListActivity.class);
-                startActivityForResult(i, 100);
-            }
-        });*/
-
-
-    } //FIN ONCREATE
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateTime();
+        updateProgressBar();
+    }
 
     public void playAction(){
         PlayerService.playAction();
@@ -169,6 +158,23 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             btnPlay.setImageResource(R.drawable.btn_pause);
         }else{
             btnPlay.setImageResource(R.drawable.btn_play);
+        }
+    }
+
+    private static void updateTime() {
+        if(PlayerService.mediaPlayerReady) {
+            long totalDuration = mp.getDuration();
+            long currentPosition = mp.getCurrentPosition();
+
+            // Displaying Total Duration time
+            songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
+            // Displaying time completed playing
+            songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentPosition));
+
+            // Updating progress bar
+            int progress = (int) (utils.getProgressPercentage(currentPosition, totalDuration));
+            //Log.d("Progress", ""+progress);
+            songProgressBar.setProgress(progress);
         }
     }
 
@@ -212,12 +218,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
         }
     }
 
-
-
-
-
-
-
     // recevoir les chansons depuis l'index playlist
 
     @Override
@@ -236,7 +236,8 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     public static void playSong(int songIndex){
         // Play song
         Log.d("Zoubi",String.valueOf(PlayListActivity.songIndex));
-        PlayerService.playSong(songIndex);
+
+        int res = PlayerService.playSong(songIndex);
         btnPlay.setImageResource(R.drawable.btn_pause);
         try {
             String songTitle = PlayerService.songsList.get(songIndex).get("songTitle");
@@ -245,13 +246,12 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             // Changing Button Image to pause image
 
             // set Progress bar values
-            songProgressBar.setProgress(0);
+            songProgressBar.setProgress((res == -1) ? (int) (utils.getProgressPercentage(mp.getCurrentPosition(), mp.getDuration())) : 0);
             songProgressBar.setMax(100);
 
             // Updating progress bar
             updateProgressBar();
         } catch (IllegalArgumentException e) {
-
             e.printStackTrace();
         } catch (IllegalStateException e) {
             e.printStackTrace();
@@ -294,22 +294,9 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
     private static Runnable mUpdateTimeTask = new Runnable() {
         public void run() {
-            if(PlayerService.mediaPlayerReady) {
-                long totalDuration = mp.getDuration();
-                long currentDuration = mp.getCurrentPosition();
-
-                // Displaying Total Duration time
-                songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
-                // Displaying time completed playing
-                songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentDuration));
-
-                // Updating progress bar
-                int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
-                //Log.d("Progress", ""+progress);
-                songProgressBar.setProgress(progress);
-            }
-            // Running this thread after 100 milliseconds
-            mHandler.postDelayed(this, 100);
+            updateTime();
+        // Running this thread after 100 milliseconds
+        mHandler.postDelayed(this, 100);
         }
     };
 
@@ -341,15 +328,14 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
         updateProgressBar();
     }
 
-
-
-    // Implémentation du repeat et du shuffle
-
+    @Override
+    public void onPause() {
+        super.onPause();
+        mHandler.removeCallbacks(mUpdateTimeTask);
+    }
 
     @Override
     public void onDestroy(){
         super.onDestroy();
-        //mp.release();
-        //PlayerService.mediaPlayerReady = false; //ça a décancerisé
     }
 }

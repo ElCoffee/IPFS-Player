@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private Intent playerService;
     public static Intent ipfsService;
 
-
+    private int currentSongIndex = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -184,13 +184,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playSong(int songIndex) {
-        mp = MediaPlayer.create(getApplicationContext(), Uri.parse(playlist.get(songIndex).get("songPath")));
-
+        if(songIndex != currentSongIndex) {
+            currentSongIndex = songIndex;
+        }
         Intent playSongIntent = new Intent(getApplicationContext(), PlayerActivity.class);
         playSongIntent.putExtra("songIndex", songIndex);
         startActivityForResult(playSongIntent, 100);
     }
 
+    void onPlayerBarClicked(View v) {
+        //showPlayerFullscreen();
+    }
 
     public SongsManager getSongManager() {
         return sm;

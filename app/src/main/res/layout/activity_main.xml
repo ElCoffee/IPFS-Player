@@ -25,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="#fbcc33">
+            android:background="#fbcc33"
+            android:onClick="onPlayerBarClicked">
 
             <ImageView
                 android:id="@+id/coverplaying"

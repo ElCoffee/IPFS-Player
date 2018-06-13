@@ -91,49 +91,51 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
     }*/
 
     public static int nextAction(){
-        Log.d("ZBOOOOOOOOOOOOOOOOOOB", String.valueOf((currentSongIndex+1)%songsList.size()));
-        currentSongIndex=(currentSongIndex+1)%songsList.size();
-        return(currentSongIndex);
+        return((currentSongIndex+1)%songsList.size());
     }
 
     public static int previousAction(){
-        Log.d("ZBOOOOOOOOOOOOOOOOOOB", String.valueOf((currentSongIndex-1)%songsList.size()));
-        if(currentSongIndex==0){
-            currentSongIndex=songsList.size()-1;
+        int newSongIndex;
+        if(currentSongIndex == 0){
+            newSongIndex = songsList.size()-1;
         }else{
-            currentSongIndex=(currentSongIndex-1)%songsList.size();
-
+            newSongIndex = (currentSongIndex - 1) % songsList.size();
         }
-        return(currentSongIndex);
+        return(newSongIndex);
     }
 
-    public static void playSong(int songIndex){
-        // Play song
-        try {
-            mp.reset();
-            mp.setDataSource(songsList.get(songIndex).get("songPath"));
-            mp.prepare();
-            mp.start();
-            mediaPlayerReady = true;
+    public static int playSong(int songIndex){
+        // Only restart mediaplayer if requested song is different from the one currently played
+        if(songIndex != currentSongIndex) {
+            currentSongIndex = songIndex;
+            try {
+                mp.reset();
+                mp.setDataSource(songsList.get(songIndex).get("songPath"));
+                mp.prepare();
+                mp.start();
+                mediaPlayerReady = true;
 
-        } catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) {
 
-            e.printStackTrace();
-        } catch (IllegalStateException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                e.printStackTrace();
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        metaRetriever = new MediaMetadataRetriever();
-        metaRetriever.setDataSource(PlayerService.songsList.get(songIndex).get("songPath"));
+            metaRetriever = new MediaMetadataRetriever();
+            metaRetriever.setDataSource(PlayerService.songsList.get(songIndex).get("songPath"));
             art = metaRetriever.getEmbeddedPicture();
 
-            if(art != null) {
+            if (art != null) {
                 Bitmap songImage = BitmapFactory.decodeByteArray(art, 0, art.length);
             }
 
             songTitle = metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
+            return 0; // New song is being played
+        }
+        return -1; // Nothing happens because requested song is the same;
     }
 
     public void onCompletion(MediaPlayer arg0) {
