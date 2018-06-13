@@ -7,11 +7,13 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
+import android.media.session.MediaSession;
 import android.net.Uri;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,6 +30,9 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
     private static int currentSongIndex = 0;
     public static ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
     public static boolean mediaPlayerReady;
+    public static MediaMetadataRetriever metaRetriever;
+    public static String songTitle;
+    public static byte[] art;
 
 
     @Override
@@ -40,6 +45,7 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
         initUI();
         super.onStart(intent, startId);
 
+        metaRetriever = new MediaMetadataRetriever();
         return START_STICKY;
     }
 
@@ -47,6 +53,7 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
         mediaPlayerReady=false;
         mp.setOnCompletionListener(this);
     }
+
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -117,6 +124,16 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        metaRetriever = new MediaMetadataRetriever();
+        metaRetriever.setDataSource(PlayerService.songsList.get(songIndex).get("songPath"));
+            art = metaRetriever.getEmbeddedPicture();
+
+            if(art != null) {
+                Bitmap songImage = BitmapFactory.decodeByteArray(art, 0, art.length);
+            }
+
+            songTitle = metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
     }
 
     public void onCompletion(MediaPlayer arg0) {

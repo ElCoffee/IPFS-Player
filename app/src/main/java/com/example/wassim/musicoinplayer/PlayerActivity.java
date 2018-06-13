@@ -53,7 +53,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     private int seekBackwardTime = 5000; // 5000 milliseconds
     public static boolean isShuffle = false;
     public static boolean isRepeat = false;
-    private static MediaMetadataRetriever metaRetriever;
 
 
     public static int currentSongIndex = PlayListActivity.songIndex;
@@ -103,8 +102,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
         PlayerService.songsList = songsManager.getPlayList();
 
         PlayerService.mediaPlayerReady = false;
-
-        metaRetriever = new MediaMetadataRetriever();
 
         playSong(getIntent().getIntExtra("songIndex",2));
 
@@ -260,10 +257,8 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             e.printStackTrace();
         }
 
-        metaRetriever = new MediaMetadataRetriever();
-        metaRetriever.setDataSource(PlayerService.songsList.get(songIndex).get("songPath"));
         try {
-            byte[] art = metaRetriever.getEmbeddedPicture();
+            byte[] art = PlayerService.art;
 
             if(art != null) {
                 Bitmap songImage = BitmapFactory.decodeByteArray(art, 0, art.length);
@@ -274,7 +269,9 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
                 coverImage.setImageResource(R.drawable.adele); //any default cover resourse folder
             }
 
-            songTitleLabel.setText(metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE));
+            songTitleLabel.setText(PlayerService.songTitle);
+
+
             /*album.setText(metaRetriver
                     .extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM));
             artist.setText(metaRetriver
