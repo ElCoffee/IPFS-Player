@@ -4,14 +4,16 @@ public class Music {
     private String Title;
     private String Artist;
     private int Thumbnail;
+    private String Hash;
 
     public Music() {
     }
 
-    public Music(String title, String artist, int thumbnail){
+    public Music(String title, String artist, int thumbnail, String hash){
         Title=title;
         Artist=artist;
         Thumbnail=thumbnail;
+        Hash=hash;
     }
 
     public String getTitle() {
@@ -26,6 +28,11 @@ public class Music {
         return Thumbnail;
     }
 
+    public String getHash() {
+        return Hash;
+    }
+
+
     public void setTitle(String title) {
         Title = title;
     }
@@ -37,4 +44,9 @@ public class Music {
     public void setThumbnail(int thumbnail) {
         Thumbnail = thumbnail;
     }
+
+    public void setHash(String hash) {
+        Hash = hash;
+    }
+
 }
