@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fond"
     tools:context=".MainActivity">
+
     <RelativeLayout
         android:id="@+id/main_container"
         android:layout_width="match_parent"
