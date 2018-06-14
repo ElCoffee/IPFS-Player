@@ -28,14 +28,14 @@ public class FileUploader extends AsyncTask<String, Void, String> {
         try {
             File tempf = new File(res[0]);
             IPFS ipfs = new IPFS();
-            //String fileHash = ipfs.getAdd().file(tempf).getHash();
-            try {
-                Log.d("Test","coucou   " + tempf.getAbsolutePath() + "   " + res);
+            String fileHash = ipfs.getAdd().file(tempf).getHash();
+            /*try {
                 daemon = new IPFSDaemon(this.context).run("add "+tempf.getAbsolutePath());
+                Log.d("IPFS_UPLOAD","Uploaded   " + tempf.getAbsolutePath() + "   " + res);
             } catch (Exception e) {
                 e.printStackTrace();
-            }
-            return "pain";
+            }*/
+            return fileHash;
         } catch (Exception e) {
             this.exception = e;
 
