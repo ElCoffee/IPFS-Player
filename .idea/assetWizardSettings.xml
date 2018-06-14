@@ -19,9 +19,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Images/Covers/the_trooper.jpg" />
-                                      <entry key="foregroundLayerName" value="cover_trooper" />
-                                      <entry key="outputName" value="trooper" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Documents/IPFSLogo.png" />
+                                      <entry key="foregroundLayerName" value="ipfs" />
+                                      <entry key="outputName" value="ipfslogo" />
                                       <entry key="previewDensity" value="XXXHIGH" />
                                     </map>
                                   </option>
@@ -36,6 +36,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>

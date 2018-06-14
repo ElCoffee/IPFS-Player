@@ -3,14 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IPFS-Player.iml" filepath="$PROJECT_DIR$/IPFS-Player.iml" />
-      <module fileurl="file://D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\IPFS-Player.iml" filepath="D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\IPFS-Player.iml" />
-      <module fileurl="file://D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\IPFS-Player-master.iml" filepath="D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\IPFS-Player-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\app\app.iml" filepath="D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/ipfs-api-kotlin-master/ipfs-api-kotlin-master.iml" filepath="$PROJECT_DIR$/libs/ipfs-api-kotlin-master/ipfs-api-kotlin-master.iml" />
-      <module fileurl="file://D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\libs\ipfs-api-kotlin-master\ipfs-api-kotlin-master.iml" filepath="D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\libs\ipfs-api-kotlin-master\ipfs-api-kotlin-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
-      <module fileurl="file://D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\libs\libs.iml" filepath="D:\Projet_Blockchain\final\IPFS-Player2\IPFS-Player\libs\libs.iml" />
     </modules>
   </component>
 </project>

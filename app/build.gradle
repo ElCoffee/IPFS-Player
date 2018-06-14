@@ -33,6 +33,7 @@ dependencies {
     implementation project(':libs:ipfs-api-kotlin-master')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:preference-v14:26.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
 
 }

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@layout/bg_player_header"
+    android:background="#ffffff"
     android:padding="5dp">
     <TextView
         android:id="@+id/playlistTitle"

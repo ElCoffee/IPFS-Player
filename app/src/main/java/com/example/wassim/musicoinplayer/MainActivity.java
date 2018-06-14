@@ -21,7 +21,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.example.wassim.musicoinplayer.fragments.DiscoverFragment;
 import com.example.wassim.musicoinplayer.fragments.PlaylistsFragment;
@@ -56,8 +59,14 @@ public class MainActivity extends AppCompatActivity {
     Context context;
     private Intent playerService;
     public static Intent ipfsService;
+    public static TextView bar_songTitle;
+    public static TextView bar_artist;
+    public static ImageView bar_art;
+    public static ImageButton bar_play;
+    private static LinearLayout bar;
+    private static ProgressBar songProgressBar;
 
-
+    private int currentSongIndex = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,11 +95,65 @@ public class MainActivity extends AppCompatActivity {
 
         mp = PlayerService.mp;
 
+        bar_songTitle = (TextView) findViewById(R.id.titleplaying);
+        bar_artist = (TextView) findViewById(R.id.artistplaying);
+        bar_art = (ImageView) findViewById(R.id.coverplaying);
 
+        bar_play = (ImageButton) findViewById(R.id.bar_btnPlay);
 
+        bar = (LinearLayout) findViewById(R.id.playerBar);
+
+        bar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                playSong(currentSongIndex);
+            }
+        });
+
+        songProgressBar = (ProgressBar) findViewById(R.id.songProgressBar2);
+
+        bar_play.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                bar_playAction();
+            }
+        });
 
     }
 
+
+    //START IPFS SERVER
+    public void startServer(){
+        //IPFS Node
+        context = getApplicationContext();
+
+        IPFSDaemon ipfsDaemon = new IPFSDaemon(getApplicationContext());
+
+        ipfsDaemon.download(MainActivity.this,true);
+
+        ipfsService = new Intent(MainActivity.this, IPFSDaemonService.class);
+        startService(ipfsService);
+    }
+
+    //STOP IPFS SERVER
+    public void stopServer(){
+        stopService(ipfsService);
+    }
+
+    //SERVER RUNNING?
+    public boolean serverIsRunning(){
+        //A IMPLEMENTER
+        return false;
+    }
+
+    public void bar_playAction(){
+        PlayerService.playAction();
+        if (PlayerService.getPlay()){
+            bar_play.setImageResource(R.drawable.btn_pause);
+        } else {
+            bar_play.setImageResource(R.drawable.btn_play);
+        }
+    }
     public void onNavBarClicked(View view) {
         String tag = (String) view.getTag();
         FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -159,13 +222,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playSong(int songIndex) {
-        mp = MediaPlayer.create(getApplicationContext(), Uri.parse(playlist.get(songIndex).get("songPath")));
-
+        if(songIndex != currentSongIndex) {
+            currentSongIndex = songIndex;
+        }
         Intent playSongIntent = new Intent(getApplicationContext(), PlayerActivity.class);
         playSongIntent.putExtra("songIndex", songIndex);
         startActivityForResult(playSongIntent, 100);
+        String songTitle = PlayerService.songTitle;
+        bar_play.setImageResource(R.drawable.btn_pause);
     }
 
+    void onPlayerBarClicked(View v) {
+        //showPlayerFullscreen();
+    }
 
     public SongsManager getSongManager() {
         return sm;
