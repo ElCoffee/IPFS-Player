@@ -38,7 +38,7 @@ public class PlayListManagerActivity extends Activity {
         itemArrey = new ArrayList<String>();
         itemArrey.clear();
 
-        itemAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,itemArrey);
+        itemAdapter = new ArrayAdapter<String>(this, R.layout.playlist_item,itemArrey);
         lvItem.setAdapter(itemAdapter);
 
 

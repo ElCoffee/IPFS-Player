@@ -27,7 +27,8 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:background="#fbcc33"
-            android:onClick="onPlayerBarClicked">
+            android:onClick="onPlayerBarClicked"
+            android:clickable="true">
 
             <ImageView
                 android:id="@+id/coverplaying"
@@ -49,13 +50,13 @@
                 android:orientation="vertical">
                 <!-- Progress Bar/Seek bar -->
                 <ProgressBar
-                    android:id="@+id/songProgressBar"
+                    android:id="@+id/songProgressBar2"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginTop="-8dp"
-                    android:maxHeight="5dp"
+                    android:maxHeight="10dp"
                     android:progress="67"
                     android:tag="tint_accent_color" />
 
@@ -69,7 +70,7 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textSize="15sp"
-                    android:text="SUPELEC EST LA"
+                    android:text="Title"
                     android:textColor="#000000" />
 
                 <TextView
@@ -82,7 +83,7 @@
                     android:maxLength="20"
                     android:maxLines="1"
                     android:textSize="13sp"
-                    android:text="by zeubila mocuhe"
+                    android:text="Artist"
                     android:textColor="#000000"/>
             </LinearLayout>
 
@@ -92,7 +93,7 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/btnPlay"
+            android:id="@+id/bar_btnPlay"
             android:layout_width="23dp"
             android:layout_height="23dp"
             android:background="@null"

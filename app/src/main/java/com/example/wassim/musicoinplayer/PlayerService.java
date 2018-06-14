@@ -32,6 +32,7 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
     public static boolean mediaPlayerReady;
     public static MediaMetadataRetriever metaRetriever;
     public static String songTitle;
+    public static String artistName;
     public static byte[] art;
 
 
@@ -133,6 +134,7 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
             }
 
             songTitle = metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
+            artistName = metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
             return 0; // New song is being played
         }
         if(mp.isPlaying() == false) mp.start();
@@ -161,6 +163,8 @@ public class PlayerService extends Service implements MediaPlayer.OnCompletionLi
             }
         }
     }
+
+
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {

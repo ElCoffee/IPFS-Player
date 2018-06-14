@@ -58,7 +58,7 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.player3);
+        setContentView(R.layout.activity_player);
 
         mHandler = new Handler();
 
@@ -224,7 +224,6 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             currentSongIndex = data.getExtras().getInt("songIndex");
             // play selected song
             Log.d("Zoubi",String.valueOf(currentSongIndex));
-
             playSong(currentSongIndex);
         }
 
@@ -243,13 +242,18 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             if(art != null) {
                 Bitmap songImage = BitmapFactory.decodeByteArray(art, 0, art.length);
                 coverImage.setImageBitmap(songImage);
+                MainActivity.bar_art.setImageBitmap(songImage);
             }
             else
             {
                 coverImage.setImageResource(R.drawable.adele); //any default cover resourse folder
+                MainActivity.bar_art.setImageResource(R.drawable.adele);
             }
 
             songTitleLabel.setText(PlayerService.songTitle);
+            MainActivity.bar_songTitle.setText(PlayerService.songTitle.toUpperCase());
+            MainActivity.bar_artist.setText(PlayerService.artistName);
+
 
 
             /*album.setText(metaRetriver
