@@ -28,7 +28,7 @@ public class PlayListActivity extends ListActivity {
         SongsManager plm = new SongsManager();
         // get all songs from sdcard
         this.songsList = plm.getPlayList();
-
+        SongsManager.updatePlaylist();
         // looping through playlist
         for (int i = 0; i < songsList.size(); i++) {
             // creating new HashMap
