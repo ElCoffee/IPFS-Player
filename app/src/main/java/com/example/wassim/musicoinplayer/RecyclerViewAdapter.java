@@ -104,6 +104,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            SongsManager.updatePlaylist();
             Toast.makeText(mContext, "Music has been downloaded!", Toast.LENGTH_SHORT).show();
         }
     }

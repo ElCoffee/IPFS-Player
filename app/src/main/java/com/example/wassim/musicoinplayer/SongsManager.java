@@ -27,6 +27,8 @@ public class SongsManager {
     }
 
     public static void updatePlaylist() {
+        songsList = new ArrayList<HashMap<String, String>>();
+
         if (MEDIA_PATH != null) {
             File home = new File(MEDIA_PATH);
             Log.d("PATH", Boolean.toString(home.isDirectory()));
