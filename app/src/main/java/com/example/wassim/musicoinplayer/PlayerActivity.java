@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -253,6 +254,8 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
             songTitleLabel.setText(PlayerService.songTitle);
             MainActivity.bar_songTitle.setText(PlayerService.songTitle.toUpperCase());
             MainActivity.bar_artist.setText(PlayerService.artistName);
+            MainActivity.bar.setVisibility(LinearLayout.VISIBLE);
+            MainActivity.bar_play.setVisibility(ImageButton.VISIBLE);
 
 
 
@@ -305,9 +308,12 @@ public class PlayerActivity extends Activity implements SeekBar.OnSeekBarChangeL
         updateProgressBar();
     }
 
+
     @Override
     public void onPause() {
         super.onPause();
         mHandler.removeCallbacks(mUpdateTimeTask);
     }
+
+
 }

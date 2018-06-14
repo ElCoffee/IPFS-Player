@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView bar_artist;
     public static ImageView bar_art;
     public static ImageButton bar_play;
-    private static LinearLayout bar;
+    public static LinearLayout bar;
     private static ProgressBar songProgressBar;
     private ImageButton btnServer;
 
@@ -105,10 +107,16 @@ public class MainActivity extends AppCompatActivity {
         bar_play = (ImageButton) findViewById(R.id.bar_btnPlay);
 
         bar = (LinearLayout) findViewById(R.id.playerBar);
+        bar_songTitle.setText("");
+        bar_artist.setText("");
+        bar.setVisibility(LinearLayout.GONE);
+        bar_play.setVisibility(ImageButton.GONE);
 
         bar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                playSong(currentSongIndex);
+                if (bar_songTitle.getText() != ""){
+                    playSong(currentSongIndex);
+                }
             }
         });
 
