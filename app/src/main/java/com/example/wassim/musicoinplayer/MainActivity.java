@@ -91,31 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //START IPFS SERVER
-    public void startServer(){
-        //IPFS Node
-        context = getApplicationContext();
-
-        IPFSDaemon ipfsDaemon = new IPFSDaemon(getApplicationContext());
-
-        ipfsDaemon.download(MainActivity.this,true);
-
-        ipfsService = new Intent(MainActivity.this, IPFSDaemonService.class);
-        startService(ipfsService);
-    }
-
-    //STOP IPFS SERVER
-    public void stopServer(){
-        stopService(ipfsService);
-    }
-
-    //SERVER RUNNING?
-    public boolean serverIsRunning(){
-        //A IMPLEMENTER
-        return false;
-    }
-
-
     public void onNavBarClicked(View view) {
         String tag = (String) view.getTag();
         FragmentTransaction ft = fragmentManager.beginTransaction();

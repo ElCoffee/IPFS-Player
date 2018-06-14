@@ -88,6 +88,8 @@ public class SearchFragment extends Fragment {
             Uri currFileURI = data.getData();
             String path=getFileName(currFileURI);
             Log.d("OPENED_FILE", path);
+            String[] res = { path };
+            new FileUploader(parentActivity).execute(res);
         }}
 
     public String getFileName(Uri uri) {
@@ -95,7 +97,6 @@ public class SearchFragment extends Fragment {
 
         if (result == null) {
             result = uri.getPath();
-            new FileUploader().execute(result);
         }
         return result;
     }
