@@ -52,8 +52,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             FileOutputStream outputStream;
             @Override
             public void onClick(View v){
-                IPFSGetTask getAsync = new IPFSGetTask();
-                getAsync.execute(mData.get(position).getHash(),mData.get(position).getTitle(),mData.get(position).getArtist());
+                if (SetNodeActivity.isIpfsRunning == false){
+                    Toast ts = Toast.makeText(mContext, "Service not launched", Toast.LENGTH_SHORT);
+                    ts.show();
+                }else{
+                    IPFSGetTask getAsync = new IPFSGetTask();
+                    getAsync.execute(mData.get(position).getHash(),mData.get(position).getTitle(),mData.get(position).getArtist());
+                }
+
             }
         });
     }
@@ -98,7 +104,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            Toast.makeText(mContext, "Musique Téléchargée !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "Music has been downloaded!", Toast.LENGTH_SHORT).show();
         }
     }
     

@@ -32,7 +32,6 @@ public class PlaylistsFragment extends DialogFragment {
     private EditText playlistNameInput;
     private ImageButton btnAdd;
     private ListView lvItem;
-    private ImageButton btnServer;
 
 
     private ArrayList<String> playlistNames;
@@ -99,17 +98,6 @@ public class PlaylistsFragment extends DialogFragment {
             }
         });
 
-
-        btnServer = (ImageButton) parentActivity.findViewById(R.id.btn_server);
-        btnServer.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Toast ts = Toast.makeText(getActivity(),"Server Started", Toast.LENGTH_SHORT);
-                ts.show();
-            }
-
-        });
 
     }
 

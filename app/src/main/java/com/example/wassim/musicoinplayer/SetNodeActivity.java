@@ -26,6 +26,7 @@ public class SetNodeActivity extends AppCompatActivity {
     private TextView text_setnodelater;
     Context context;
     public static Intent ipfsService;
+    public static boolean isIpfsRunning;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,11 @@ public class SetNodeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the Signup activity
                 // pio
+                isIpfsRunning = false;
                 Intent launchMain = new Intent(getApplicationContext(), MainActivity.class);
-                startActivityForResult(launchMain, 101);
+                startActivityForResult(launchMain, 100);
+
+                finish();
             }
         });
     }
@@ -68,6 +72,8 @@ public class SetNodeActivity extends AppCompatActivity {
         Log.d(TAG, "Login");
 
         btn_setNode.setEnabled(false);
+
+        isIpfsRunning = true;
 
         final ProgressDialog progressDialog = new ProgressDialog(SetNodeActivity.this,
                 R.style.AppTheme);
@@ -87,9 +93,10 @@ public class SetNodeActivity extends AppCompatActivity {
                     }
                 }, 1000);
 
-        Intent launchMain = new Intent(getApplicationContext(), MainActivity.class);
-        startActivityForResult(launchMain, 101);
 
+        Intent launchMain = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(launchMain, 100);
+        finish();
 
     }
 
@@ -98,9 +105,6 @@ public class SetNodeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
-
-                // TODO: Implement successful signup logic here
-                // By default we just finish the Activity and log them in automatically
                 this.finish();
             }
         }

@@ -25,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.wassim.musicoinplayer.fragments.DiscoverFragment;
 import com.example.wassim.musicoinplayer.fragments.PlaylistsFragment;
@@ -36,6 +37,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 import io.ipfs.kotlin.IPFS;
 import io.ipfs.kotlin.IPFSConnection;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public static ImageButton bar_play;
     private static LinearLayout bar;
     private static ProgressBar songProgressBar;
+    private ImageButton btnServer;
 
     private int currentSongIndex = -1;
 
@@ -119,6 +122,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnServer = (ImageButton) findViewById(R.id.btn_server);
+        btnServer.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                serverBtnAction();
+            }
+
+        });
+
+        if (SetNodeActivity.isIpfsRunning == true){
+            btnServer.setImageResource(R.drawable.btn_pause);
+        }
+
     }
 
 
@@ -133,17 +150,30 @@ public class MainActivity extends AppCompatActivity {
 
         ipfsService = new Intent(MainActivity.this, IPFSDaemonService.class);
         startService(ipfsService);
+        SetNodeActivity.isIpfsRunning = true;
     }
 
     //STOP IPFS SERVER
     public void stopServer(){
         stopService(ipfsService);
+        SetNodeActivity.isIpfsRunning = false;
     }
 
+
     //SERVER RUNNING?
-    public boolean serverIsRunning(){
-        //A IMPLEMENTER
-        return false;
+    public void serverBtnAction(){
+        if (SetNodeActivity.isIpfsRunning == true){
+            stopServer();
+            Toast ts = Toast.makeText(MainActivity.this, "Server Stopped", Toast.LENGTH_SHORT);
+            ts.show();
+            btnServer.setImageResource(R.drawable.btn_play);
+        }
+        else{
+            startServer();
+            Toast ts = Toast.makeText(MainActivity.this, "Server Started", Toast.LENGTH_SHORT);
+            ts.show();
+            btnServer.setImageResource(R.drawable.btn_pause);
+        }
     }
 
     public void bar_playAction(){
